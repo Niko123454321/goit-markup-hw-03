@@ -18,7 +18,10 @@ body {
   line-height: 120%;
   letter-spacing: 0.03em;
 }
-
+.container {
+  width: 1200px;
+  margin-left: 215px;
+}
 /* Site nav */
 .header {
   display: flex;
@@ -30,7 +33,6 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: var(--title-text-color);
-  margin-left: 215px;
 }
 .logo .accent {
   color: var(--accent-color);
@@ -72,7 +74,7 @@ body {
 .contact {
   display: flex;
   list-style: none;
-  margin-left: 331px;
+  margin-left: auto;
 }
 
 .contact .item + .item {
@@ -239,9 +241,13 @@ body {
 
 .footer {
   height: 6.34%;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: var(--footer-buck-color);
 }
-
+.footer-contact {
+  padding-left: 0px;
+}
 .footer-logo {
   text-decoration: none;
   color: var(--primary-white-color);
