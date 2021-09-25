@@ -7,37 +7,84 @@
   --footer-contact-color: rgb(160, 150, 150);
   --footer-buck-color: #2f303a;
   --box-buck-color: #f5f4fa;
+  --border: #ececec;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+/* Класс для обнуления базовых свойств у списков (ul) */
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+/* Свойства для корректного отображения картинок */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Свойства для обнуления курсива у address */
+
+address {
+  font-style: normal;
+  /* or */
+  font-style: inherit;
 }
 
 body {
-  width: 1600px;
   font-family: 'Roboto', sans-serif;
   color: var(--title-text-color);
   font-size: 14px;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.hidden {
+  font-size: 0;
 }
 .container {
   width: 1200px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-left: 215px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Site nav */
 .header {
+  border-bottom: 1px solid var(--border);
+}
+
+.container-header {
   display: flex;
   align-items: center;
 }
 
-.border {
-  border: 1px solid #ececec;
-}
 .logo {
   font-family: raleway;
   font-size: 26px;
   font-weight: 700;
-  text-decoration: none;
   color: var(--title-text-color);
 }
 .logo .accent {
@@ -48,7 +95,6 @@ body {
   display: flex;
   line-height: 110%;
   letter-spacing: 0.02em;
-  list-style: none;
   margin-left: 93px;
 }
 .site-nav .link {
@@ -63,7 +109,6 @@ body {
 .site-nav .link {
   color: var(--title-text-color);
   font-weight: 500;
-  text-decoration: none;
 }
 
 .site-nav .link.current {
@@ -79,7 +124,6 @@ body {
 
 .contact {
   display: flex;
-  list-style: none;
   margin-left: auto;
 }
 
@@ -89,7 +133,6 @@ body {
 
 .contact .link {
   font-weight: 500;
-  text-decoration: none;
   line-height: 110%;
   letter-spacing: 0.02em;
 }
@@ -98,6 +141,7 @@ body {
 }
 
 .hero-text {
+  text-transform: uppercase;
   background-color: var(--hiro-text-buck-color);
   letter-spacing: 0.06em;
   text-align: center;
@@ -111,6 +155,13 @@ body {
 }
 
 .hero-text .button {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border: none;
+
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-size: 16px;
@@ -118,11 +169,14 @@ body {
   line-height: 190%;
 }
 
+.portfolio {
+  margin-top: 100px;
+}
+
 .control {
   display: flex;
   margin-left: 280px;
   line-height: 160%;
-  list-style: none;
 }
 
 .control .button.current {
@@ -135,9 +189,15 @@ body {
   align-items: center;
 }
 .control .button {
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  border: none;
 }
 
 .control .button:hover,
@@ -148,7 +208,6 @@ body {
 
 .project {
   display: flex;
-  list-style: none;
   flex-wrap: wrap;
   padding: 0px;
 }
@@ -179,7 +238,6 @@ body {
 }
 .features {
   display: flex;
-  list-style: none;
 }
 
 .features .item + .item {
@@ -203,8 +261,6 @@ body {
 }
 .section .list {
   display: flex;
-
-  list-style: none;
 }
 
 .img {
@@ -218,20 +274,16 @@ body {
 }
 
 .subject {
+  margin-bottom: 10px;
   font-size: 42px;
   color: var(--title-text-color);
   font-weight: 700;
-}
-
-.list {
-  list-style: none;
 }
 
 /* кто мы*/
 
 .box {
   background-color: var(--box-buck-color);
-  list-style: none;
 }
 
 .box .items {
@@ -248,9 +300,6 @@ body {
   font-weight: 700;
 }
 
-.items {
-  list-style: none;
-}
 .items .subject {
   text-align: center;
   font-size: 16px;
@@ -266,11 +315,19 @@ body {
 /* footer */
 
 .footer {
-  height: 6.34%;
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--footer-buck-color);
 }
+
+.footer .container {
+  margin-bottom: 20px;
+}
+
+.footer .item {
+  margin-bottom: 9px;
+}
+
 .footer-contact {
   padding-left: 0px;
 }
@@ -290,7 +347,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   font-style: normal;
-  list-style: none;
 }
 
 .footer-contact .link:hover,
@@ -300,12 +356,10 @@ body {
 
 .footer-contact .link {
   text-decoration: none;
-  list-style: none;
   color: var(--footer-contact-color);
 }
 
 .footer-contact .link-accent {
   text-decoration: none;
-  list-style: none;
   color: var(--primary-white-color);
 }
