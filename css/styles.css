@@ -8,6 +8,8 @@
   --footer-buck-color: #2f303a;
   --box-buck-color: #f5f4fa;
   --border: #ececec;
+
+  --card-set-gap: 30px;
 }
 
 html {
@@ -206,17 +208,20 @@ body {
   background-color: var(--accent-color);
 }
 
-.project {
+.card-set {
   display: flex;
   flex-wrap: wrap;
-  padding: 0px;
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap + 50px));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.project .list + .list {
-  margin-left: 30px;
+.card-set .item {
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
 }
 
-.project .title {
+.card-set .title {
   font-size: 18px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -224,7 +229,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.project .desk {
+.card-set .desk {
   font-size: 16px;
   color: var(--primary-text-color);
   font-weight: 400;
