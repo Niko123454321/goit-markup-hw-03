@@ -348,6 +348,7 @@ body {
 
 .card-set-master {
   padding: 0px;
+
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 4 - var(--card-set-gap));
@@ -363,6 +364,7 @@ body {
 }
 
 .card-set-master .item {
+  border-radius: 0px 0px 4px 4px;
   box-shadow: var(--card-shadow);
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
