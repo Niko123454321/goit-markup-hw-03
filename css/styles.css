@@ -234,12 +234,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap + 50px));
+  margin-top: calc(-1 * var(--card-set-gap));
   margin-left: calc(-1 * var(--card-set-gap));
   margin-bottom: 94px;
 }
 
 .card-set .item {
+  width: calc((100% - 90px) / 3);
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
 }
@@ -322,6 +323,7 @@ body {
 }
 
 .card-set-list .img {
+  width: calc((100% - 90px) / 3);
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
 }
@@ -351,6 +353,7 @@ body {
 
   display: flex;
   flex-wrap: wrap;
+
   flex-basis: calc(100% / 4 - var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
   margin-left: calc(-1 * var(--card-set-gap));
@@ -364,6 +367,7 @@ body {
 }
 
 .card-set-master .item {
+  width: calc((100% - 120px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--card-shadow);
   margin-top: var(--card-set-gap);
